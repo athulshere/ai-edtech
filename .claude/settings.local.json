@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx create-react-app . --template typescript)",
+      "Bash(npx create-react-app:*)",
+      "Bash(npm install:*)",
+      "Bash(npm uninstall:*)",
+      "Bash(brew services start:*)",
+      "Bash(brew tap:*)",
+      "Bash(brew install:*)",
+      "Bash(node -e:*)",
+      "Bash(node test-ai-setup.js:*)",
+      "Bash(node check-extracted-text.js:*)",
+      "Bash(node check-processing-assessments.js:*)",
+      "Bash(node src/migrations/addUsernames.js:*)",
+      "Bash(npm run build:*)"
+    ]
+  }
+}
