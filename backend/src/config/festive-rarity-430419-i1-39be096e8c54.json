@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "festive-rarity-430419-i1",
+  "private_key_id": "39be096e8c543ab5e9460538e5c3b382605295f9",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCZbEzhRfsajaVI\nBo1Zc1HRraNKSyN8Yn6FmaV9ZQUoqZ4oFt+sG1rmcYzPZCiRvmUtH/ZfZOTRbyvt\nklgpAfC3GiPCsyFk3U1wVDPZ+7JBgWXCv/JKDhN+QAeW+q3PBrxklALx2SwaA6Wb\n3xmoAIt81lsDvgz0j98GmiqY4T3ZQ7HbsPxaXqp5aW2f37zbCn5LFsL2OWqRHRa8\nHeCXhyC2/G7d7/K5Xq3TBXHFHvAmPu/lzFrwkWQRtWE7k1OYQMlx6G1LdYcjtQbU\naSQzYZP5aV2TdDJECBRxt0LS1IIaffy3ziV1q7OAoe46SLBcKHTKeLciflaOhBJd\nEZ6YINm9AgMBAAECggEAIs5jEqhhs0B3QsPZxXVYFo2iAfTR9CIUOhMFbFFCvlrc\nupOV4uHB2Y3hOBus6IOdSIN7zWCCWNEz0g3lWkhKZ//SJRWmec+LBfTUXpuvcRT+\nFRSezxYqbfXwwtvUGqeYjejWUi/GxZAWPip7E5YsDwJCW7L+FW2eV00aZNyUv3k2\nLxNDRPnpzEaTLgH2x8aEvPJv+0FSo8V4Pg+DBarxftX2LISO23iPBXOyGv5pAhdC\nxdmfIcaKFwSt0Mpv4w3jxOhSnVTig8gBWX3I0DDbsSOynjOJoTL7vwSnIerve9MH\nlQNMLs5r3ydLgq/TFQCIyDCWZZl9FhZXbirq9XzOMQKBgQDIQYsBfh3veV3li8a9\nsBF2NvbvsiCaEpEKpwO342bZbaIFpq2zTIVUqknuszgMCYmK68eHDOxAACWC9UzD\nl+pGLicFAefetVYp+i8mA0HtNUtrefMZK0gJ5grMdcyHTtoHiTE2hP0iwVLhqH6/\nFKogqKJS4nZZ6ltpDvjAr3K5uwKBgQDEIWO36XTAIMDQYoYlgAIdKbIYUPQkOYjg\n+ebUhVPg6TdWXvOJdoBSX/2Rjkb38FmSe34qINgb6jAe67Qgm8DNvKAmap7ymHov\nivgKwfejbQDitVOB1uWyxGr/CBNRzZgw0zz5GNvWa14Eei1LoEbsmp3fFNmW2sjm\n7/n+EMSm5wKBgQCjwbVCSzd/lOfLxjmG9GvTF69m42r1kyk4ZMsNnM+GDbjolhyE\n+pYtXfOHVtcGQOZQy+4l6dNnorcKGD3l1FyndyZBWgWagP8s5IGZvCA1Mdey086P\nTm1iatN5zvqpyzlP4Eh2JNo7iYuVLIw5BVT5z+ytirLtZE/L4YpZRx+x8QKBgQDD\n0nqXs5YIBiu9Y8GAS5DQwUK6GInKaU+LILgh1ITs+K1xpRgPVavFk2W/IIknIGiu\nYnKTaXucU3R8SuXr8NbOE9jqwmW03hyQv3Xsd8HjAAB0WoroBkIM/SO/QrbXZCji\nBubH5tQH/+c9HSeAbKSjs7SQeWbOwd75BP1beC6AXQKBgAgCcG+zh/+/rfAgHnMG\ne8jOf8HCRIti7F9/YqPproTaK6r20YXAN1BfYsymzZeoBYtuT4e9NESkAPJkBs6S\n2G629PeF1FyLUY+TljwshdS0SDRZX1tpPHUrFdsTmy9Kjc8pj685DFBZ7kL/zD7h\nLEwtOKeNNxC/Vb/6ONt/Ubro\n-----END PRIVATE KEY-----\n",
+  "client_email": "edtech-vision-id@festive-rarity-430419-i1.iam.gserviceaccount.com",
+  "client_id": "109931447932200648560",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/edtech-vision-id%40festive-rarity-430419-i1.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
