@@ -19,7 +19,9 @@
       "Bash(xargs kill:*)",
       "Bash(npm start)",
       "Bash(curl:*)",
-      "Bash(kill:*)"
+      "Bash(kill:*)",
+      "Bash(ls:*)",
+      "Bash(grep:*)"
     ]
   }
 }

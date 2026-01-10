@@ -23,6 +23,7 @@ dist/
 # IDE
 .vscode/
 .idea/
+.claude/
 *.swp
 *.swo
 *~
@@ -40,3 +41,15 @@ coverage/
 
 # Production
 .env.production
+
+# Utility/Test Scripts
+backend/check-*.js
+backend/test-*.js
+backend/get-*.js
+backend/migrate-*.js
+backend/reset-*.js
+
+# Sample Data
+*.xlsx
+*sample*.js
+*credentials*.js
