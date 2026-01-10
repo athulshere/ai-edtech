@@ -1,0 +1,658 @@
+.journey-player {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.player-header {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.journey-progress {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+.chapter-indicator {
+  font-weight: 600;
+  color: #667eea;
+  font-size: 16px;
+}
+
+.points-display {
+  background: #667eea;
+  color: white;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-weight: 600;
+}
+
+.discoveries-count {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Introduction Screen */
+.introduction-screen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.introduction-content {
+  background: white;
+  border-radius: 20px;
+  padding: 48px;
+  max-width: 800px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.introduction-content h1 {
+  font-size: 36px;
+  color: #333;
+  margin-bottom: 16px;
+}
+
+.intro-setting {
+  font-size: 18px;
+  color: #667eea;
+  font-weight: 600;
+  margin-bottom: 24px;
+  font-style: italic;
+}
+
+.intro-narrative {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 24px;
+  text-align: left;
+}
+
+.character-role {
+  background: #f5f5f5;
+  padding: 16px;
+  border-radius: 12px;
+  margin-bottom: 32px;
+  font-size: 15px;
+  text-align: left;
+}
+
+.journey-info {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 15px;
+  color: #666;
+}
+
+.info-item .icon {
+  font-size: 20px;
+}
+
+.btn-large {
+  padding: 16px 48px;
+  font-size: 18px;
+}
+
+/* Chapter Container */
+.chapter-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.scene-header {
+  background: white;
+  border-radius: 16px;
+  padding: 32px;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.scene-header h1 {
+  font-size: 32px;
+  color: #333;
+  margin-bottom: 16px;
+}
+
+.scene-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: #666;
+  font-size: 15px;
+}
+
+.location {
+  font-weight: 600;
+  color: #667eea;
+}
+
+.atmosphere {
+  font-style: italic;
+}
+
+.narrative-section {
+  background: white;
+  border-radius: 16px;
+  padding: 32px;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.narrative-text {
+  font-size: 17px;
+  line-height: 1.8;
+  color: #333;
+}
+
+/* Characters Section */
+.characters-section {
+  background: white;
+  border-radius: 16px;
+  padding: 32px;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.characters-section h3 {
+  font-size: 22px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.character-card {
+  background: #f8f9fa;
+  border-left: 4px solid #667eea;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+.character-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.character-header strong {
+  font-size: 18px;
+  color: #333;
+}
+
+.character-role {
+  font-size: 13px;
+  color: #666;
+  background: white;
+  padding: 4px 10px;
+  border-radius: 12px;
+}
+
+.character-dialogue {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555;
+  font-style: italic;
+}
+
+/* Discoveries Section */
+.discoveries-section {
+  background: white;
+  border-radius: 16px;
+  padding: 32px;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.discoveries-section h3 {
+  font-size: 22px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.discoveries-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 16px;
+}
+
+.discovery-card {
+  background: #f8f9fa;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s;
+  position: relative;
+}
+
+.discovery-card:hover {
+  background: #e9ecef;
+  transform: translateY(-4px);
+}
+
+.discovery-card.collected {
+  background: #e8f5e9;
+  border: 2px solid #4caf50;
+  cursor: default;
+}
+
+.discovery-icon {
+  font-size: 36px;
+  margin-bottom: 12px;
+}
+
+.discovery-name {
+  font-size: 14px;
+  color: #333;
+  font-weight: 600;
+}
+
+.collected-badge {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: #4caf50;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+/* Challenges Section */
+.challenges-section {
+  background: white;
+  border-radius: 16px;
+  padding: 32px;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.challenges-section h3 {
+  font-size: 22px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.challenge-card {
+  background: #fff3e0;
+  border-left: 4px solid #ff9800;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.challenge-icon {
+  font-size: 36px;
+  flex-shrink: 0;
+}
+
+.challenge-info {
+  flex: 1;
+}
+
+.challenge-info h4 {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 4px;
+}
+
+.challenge-type {
+  font-size: 13px;
+  color: #666;
+  text-transform: capitalize;
+}
+
+/* Decisions Section */
+.decisions-section {
+  background: white;
+  border-radius: 16px;
+  padding: 32px;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.decision-block {
+  margin-bottom: 24px;
+}
+
+.decision-prompt {
+  font-size: 22px;
+  color: #333;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.decision-options {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.decision-option {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 20px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.decision-option:hover {
+  transform: translateX(8px);
+  box-shadow: 0 6px 16px rgba(102, 126, 234, 0.4);
+}
+
+.option-text {
+  font-size: 17px;
+  font-weight: 600;
+  text-align: left;
+}
+
+.option-arrow {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+/* Discovery Modal Screen */
+.discovery-modal-screen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.discovery-modal-content {
+  background: white;
+  border-radius: 20px;
+  padding: 48px;
+  max-width: 700px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.discovery-header {
+  margin-bottom: 24px;
+}
+
+.discovery-icon {
+  font-size: 64px;
+  margin-bottom: 16px;
+}
+
+.discovery-modal-content h2 {
+  font-size: 28px;
+  color: #667eea;
+  margin-bottom: 8px;
+}
+
+.discovery-modal-content h3 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 16px;
+}
+
+.discovery-year {
+  font-size: 14px;
+  color: #888;
+  margin-bottom: 24px;
+  font-weight: 600;
+}
+
+.discovery-content {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #555;
+  text-align: left;
+  margin-bottom: 24px;
+  padding: 20px;
+  background: #f5f5f5;
+  border-radius: 12px;
+}
+
+.historical-significance {
+  text-align: left;
+  background: #e8f4f8;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 32px;
+}
+
+.historical-significance strong {
+  display: block;
+  margin-bottom: 8px;
+  color: #667eea;
+}
+
+.historical-significance p {
+  margin: 0;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* Decision Result Screen */
+.decision-result-screen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.decision-result-content {
+  background: white;
+  border-radius: 20px;
+  padding: 48px;
+  max-width: 700px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.result-icon {
+  font-size: 64px;
+  margin-bottom: 24px;
+}
+
+.decision-result-content h2 {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 24px;
+}
+
+.consequence-text {
+  font-size: 17px;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 24px;
+  text-align: left;
+}
+
+.learning-point {
+  background: #e3f2fd;
+  border-left: 4px solid #2196f3;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 24px;
+  text-align: left;
+}
+
+.learning-point strong {
+  display: block;
+  margin-bottom: 8px;
+  color: #2196f3;
+}
+
+.learning-point p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #555;
+  margin: 0;
+}
+
+.points-awarded {
+  font-size: 24px;
+  font-weight: 700;
+  color: #4caf50;
+  margin-bottom: 32px;
+}
+
+/* Challenge Screen */
+.challenge-screen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.challenge-container {
+  background: white;
+  border-radius: 20px;
+  padding: 48px;
+  max-width: 700px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.challenge-container h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 32px;
+}
+
+.decode-challenge {
+  margin-bottom: 32px;
+}
+
+.encoded-message {
+  background: #f5f5f5;
+  padding: 20px;
+  border-radius: 8px;
+  font-size: 24px;
+  font-family: 'Courier New', monospace;
+  letter-spacing: 4px;
+  margin-bottom: 16px;
+  color: #333;
+}
+
+.hint {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 24px;
+  font-style: italic;
+}
+
+.challenge-input {
+  width: 100%;
+  padding: 16px;
+  font-size: 18px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  text-align: center;
+  font-family: 'Courier New', monospace;
+}
+
+.challenge-input:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.challenge-actions {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+}
+
+/* Buttons */
+.btn {
+  padding: 14px 32px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(102, 126, 234, 0.4);
+}
+
+.btn-secondary {
+  background: white;
+  color: #667eea;
+  border: 2px solid #667eea;
+}
+
+.btn-secondary:hover {
+  background: #f8f9fa;
+}
+
+.loading, .error {
+  text-align: center;
+  padding: 60px 20px;
+  color: white;
+  font-size: 18px;
+}
+
+@media (max-width: 768px) {
+  .player-header {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .introduction-content,
+  .decision-result-content,
+  .challenge-container {
+    padding: 32px 24px;
+  }
+
+  .introduction-content h1,
+  .scene-header h1 {
+    font-size: 24px;
+  }
+
+  .discoveries-grid {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  }
+
+  .challenge-card {
+    flex-direction: column;
+    text-align: center;
+  }
+}

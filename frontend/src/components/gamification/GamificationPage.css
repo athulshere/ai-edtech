@@ -1,0 +1,470 @@
+.gamification-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: #f8f9fa;
+  min-height: 100vh;
+}
+
+/* Header */
+.page-header {
+  margin-bottom: 2rem;
+}
+
+.back-button {
+  background: white;
+  border: 1px solid #e0e0e0;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  transition: all 0.2s;
+}
+
+.back-button:hover {
+  background: #f5f5f5;
+  border-color: #d0d0d0;
+}
+
+.header-content {
+  text-align: center;
+}
+
+.page-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #333;
+  margin: 0 0 0.5rem 0;
+}
+
+.page-subtitle {
+  color: #666;
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+/* Overview Section */
+.overview-section {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.level-overview {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 16px;
+  padding: 2rem;
+  color: white;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.level-circle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 140px;
+  height: 140px;
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 50%;
+  border: 4px solid rgba(255, 255, 255, 0.4);
+  flex-shrink: 0;
+}
+
+.level-number {
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.level-label {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 0.25rem;
+}
+
+.level-details {
+  flex: 1;
+}
+
+.level-details h2 {
+  font-size: 1.8rem;
+  margin: 0 0 1rem 0;
+  font-weight: 600;
+}
+
+.points-display {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.points-value {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.points-label {
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+.progress-container {
+  margin-top: 1rem;
+}
+
+.progress-bar-large {
+  width: 100%;
+  height: 12px;
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+}
+
+.progress-fill-large {
+  height: 100%;
+  background: linear-gradient(90deg, #ffd700, #ffed4e);
+  transition: width 0.5s ease;
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.6);
+}
+
+.progress-text {
+  font-size: 0.9rem;
+  margin: 0;
+  opacity: 0.95;
+}
+
+/* Streaks Overview */
+.streaks-overview {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.streak-card {
+  background: white;
+  border-radius: 16px;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  flex: 1;
+}
+
+.current-streak {
+  border-left: 4px solid #ff6b6b;
+}
+
+.best-streak {
+  border-left: 4px solid #ffd700;
+}
+
+.streak-icon-large {
+  font-size: 3rem;
+}
+
+.streak-info {
+  flex: 1;
+}
+
+.streak-number {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #333;
+  line-height: 1;
+}
+
+.streak-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #666;
+  margin-top: 0.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.streak-description {
+  font-size: 0.85rem;
+  color: #999;
+  margin-top: 0.25rem;
+}
+
+/* Section */
+.section {
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.section-header-inline {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #333;
+  margin: 0;
+}
+
+.badge-count,
+.achievement-count {
+  background: #667eea;
+  color: white;
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+/* Badges Grid */
+.badges-grid-large {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.badge-card {
+  background: linear-gradient(135deg, #f5f7fa 0%, #e9ecef 100%);
+  border-radius: 12px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+  border: 2px solid transparent;
+}
+
+.badge-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  border-color: #667eea;
+}
+
+.badge-icon-large {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.badge-content {
+  width: 100%;
+}
+
+.badge-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #333;
+  margin: 0 0 0.5rem 0;
+}
+
+.badge-description {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 0 0 0.75rem 0;
+}
+
+.badge-date {
+  font-size: 0.8rem;
+  color: #999;
+  margin: 0;
+}
+
+/* Achievements List */
+.achievements-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.achievement-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem;
+  background: #f8f9fa;
+  border-radius: 12px;
+  border-left: 4px solid #667eea;
+  transition: all 0.2s;
+}
+
+.achievement-item:hover {
+  background: #f0f1f3;
+  transform: translateX(4px);
+}
+
+.achievement-icon {
+  font-size: 2rem;
+  flex-shrink: 0;
+}
+
+.achievement-content {
+  flex: 1;
+}
+
+.achievement-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+  margin: 0 0 0.25rem 0;
+}
+
+.achievement-description {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 0 0 0.25rem 0;
+}
+
+.achievement-date {
+  font-size: 0.8rem;
+  color: #999;
+  margin: 0;
+}
+
+.achievement-points {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #667eea;
+  flex-shrink: 0;
+}
+
+/* Empty State */
+.empty-state {
+  text-align: center;
+  padding: 3rem 2rem;
+}
+
+.empty-icon {
+  font-size: 4rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.empty-state p {
+  color: #666;
+  font-size: 1.1rem;
+  margin: 0.5rem 0;
+}
+
+.empty-description {
+  font-size: 0.9rem !important;
+  color: #999 !important;
+}
+
+/* CTA Section */
+.cta-section {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 16px;
+  padding: 2rem;
+  text-align: center;
+  color: white;
+}
+
+.cta-section h3 {
+  font-size: 1.5rem;
+  margin: 0 0 0.5rem 0;
+}
+
+.cta-section p {
+  font-size: 1rem;
+  margin: 0 0 1.5rem 0;
+  opacity: 0.95;
+}
+
+.btn-primary-large {
+  background: white;
+  color: #667eea;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.btn-primary-large:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Loading */
+.loading,
+.error {
+  text-align: center;
+  padding: 4rem 2rem;
+  font-size: 1.2rem;
+  color: #666;
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+  .overview-section {
+    grid-template-columns: 1fr;
+  }
+
+  .level-overview {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .streaks-overview {
+    flex-direction: row;
+  }
+}
+
+@media (max-width: 768px) {
+  .gamification-page {
+    padding: 1rem;
+  }
+
+  .page-title {
+    font-size: 1.5rem;
+  }
+
+  .level-circle {
+    width: 110px;
+    height: 110px;
+  }
+
+  .level-number {
+    font-size: 3rem;
+  }
+
+  .points-value {
+    font-size: 2rem;
+  }
+
+  .badges-grid-large {
+    grid-template-columns: 1fr;
+  }
+
+  .streaks-overview {
+    flex-direction: column;
+  }
+
+  .achievement-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .achievement-points {
+    margin-top: 0.5rem;
+  }
+}

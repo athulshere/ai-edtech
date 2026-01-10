@@ -1,0 +1,137 @@
+/* Class Management Specific Styles */
+
+.class-management-wrapper {
+  background: linear-gradient(135deg, #fef9e7 0%, #f9ebea 100%);
+}
+
+.class-management-wrapper .dashboard-navbar {
+  background: linear-gradient(135deg, #16a085 0%, #1abc9c 100%);
+  border-bottom: 3px solid #f39c12;
+}
+
+.class-management-wrapper .dashboard-navbar .brand-icon,
+.class-management-wrapper .dashboard-navbar .brand-text,
+.class-management-wrapper .dashboard-navbar .school-name,
+.class-management-wrapper .dashboard-navbar .school-code,
+.class-management-wrapper .dashboard-navbar .user-name,
+.class-management-wrapper .dashboard-navbar .user-role {
+  color: #ecf0f1;
+}
+
+.class-management-wrapper .school-badge {
+  background: rgba(236, 240, 241, 0.15);
+  border: 1px solid rgba(236, 240, 241, 0.3);
+}
+
+.class-management-wrapper .school-icon {
+  color: #f39c12;
+}
+
+/* Header Styling */
+.class-management-wrapper .dashboard-header {
+  background: white;
+  padding: var(--spacing-xl);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 4px 12px rgba(22, 160, 133, 0.08);
+  margin-bottom: var(--spacing-2xl);
+  border-left: 5px solid #16a085;
+}
+
+.class-management-wrapper .dashboard-title {
+  background: linear-gradient(135deg, #16a085 0%, #f39c12 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.class-management-wrapper .dashboard-subtitle {
+  color: #7f8c8d;
+  font-weight: 500;
+}
+
+/* Stat Cards */
+.class-management-wrapper .stat-card {
+  border-top: 4px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.class-management-wrapper .stat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.class-management-wrapper .stat-card-primary {
+  border-top-color: #16a085;
+  background: linear-gradient(135deg, #fff 0%, #e8f8f5 100%);
+}
+
+.class-management-wrapper .stat-card-success {
+  border-top-color: #27ae60;
+  background: linear-gradient(135deg, #fff 0%, #eafaf1 100%);
+}
+
+.class-management-wrapper .stat-card-warning {
+  border-top-color: #f39c12;
+  background: linear-gradient(135deg, #fff 0%, #fef5e7 100%);
+}
+
+.class-management-wrapper .stat-card-info {
+  border-top-color: #3498db;
+  background: linear-gradient(135deg, #fff 0%, #ebf5fb 100%);
+}
+
+/* Class Cards */
+.class-management-wrapper .card {
+  border: 1px solid #e8f8f5;
+  box-shadow: 0 3px 10px rgba(22, 160, 133, 0.08);
+  transition: all 0.3s ease;
+}
+
+.class-management-wrapper .card:hover {
+  box-shadow: 0 8px 20px rgba(22, 160, 133, 0.15);
+  transform: translateY(-2px);
+}
+
+.classes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: var(--spacing-lg);
+  margin-top: var(--spacing-2xl);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .classes-grid {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .classes-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Form styling improvements for modals */
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-lg);
+}
+
+@media (max-width: 640px) {
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Empty state for classes */
+.activity-empty button {
+  margin-top: var(--spacing-lg);
+}
