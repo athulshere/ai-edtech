@@ -1,5 +1,27 @@
 # Database Schema Design - Complete School Management System
 
+> **Note:** This document describes the complete vision for a comprehensive school management system. The current implementation focuses on the core assessment and analytics features (User, Student, Assessment collections). Additional features like attendance, fees, timetables, and homework management represent planned future enhancements.
+
+## Current Implementation
+
+The following collections are **currently implemented**:
+- ✅ **users** - User authentication and profiles (parents, teachers, admins)
+- ✅ **students** - Student profiles with learning analytics
+- ✅ **assessments** - AI-graded assessments with historical tracking
+
+## Future Expansion (Planned)
+
+The schemas below represent the planned expansion into a full school management system:
+- ⏳ Schools, Classes, Sections
+- ⏳ Attendance tracking
+- ⏳ Homework and submissions
+- ⏳ Fee management
+- ⏳ Timetables and scheduling
+- ⏳ Announcements and messaging
+- ⏳ Study materials and events
+
+---
+
 ## 🗄️ Collection Overview
 
 ```
