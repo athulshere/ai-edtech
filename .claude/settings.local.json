@@ -13,7 +13,13 @@
       "Bash(node check-extracted-text.js:*)",
       "Bash(node check-processing-assessments.js:*)",
       "Bash(node src/migrations/addUsernames.js:*)",
-      "Bash(npm run build:*)"
+      "Bash(npm run build:*)",
+      "Bash(node:*)",
+      "Bash(lsof:*)",
+      "Bash(xargs kill:*)",
+      "Bash(npm start)",
+      "Bash(curl:*)",
+      "Bash(kill:*)"
     ]
   }
 }
