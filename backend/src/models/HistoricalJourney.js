@@ -19,7 +19,7 @@ const historicalJourneySchema = new mongoose.Schema({
   },
   subject: {
     type: String,
-    enum: ['History', 'Social Studies', 'Geography', 'EVS'],
+    enum: ['History', 'Social Studies', 'Geography', 'EVS', 'Mathematics', 'English', 'Science'],
     default: 'History'
   },
 
