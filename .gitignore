@@ -14,6 +14,8 @@ yarn-error.log*
 # Google Cloud credentials
 **/google-vision-credentials.json
 **/service-account-*.json
+**/festive-rarity-*.json
+backend/src/config/*.json
 
 # Build outputs
 build/
