@@ -54,4 +54,5 @@ backend/reset-*.js
 # Sample Data
 *.xlsx
 *sample*.js
-*credentials*.js
+google-credentials*.js
+aws-credentials*.js
