@@ -38,7 +38,9 @@ const JourneyList = () => {
       console.log('Fetching attempts for student:', studentId);
       const attemptsRes = await api.get(`/journeys/student/${studentId}/attempts`);
       console.log('Attempts response:', attemptsRes.data);
-      setAttempts(attemptsRes.data.data || []);
+      // Filter out any attempts where journey has been deleted
+      const validAttempts = (attemptsRes.data.data || []).filter(attempt => attempt.journeyId !== null);
+      setAttempts(validAttempts);
 
       setLoading(false);
     } catch (error) {

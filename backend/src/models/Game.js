@@ -162,6 +162,19 @@ const gameSchema = new mongoose.Schema({
   createdBy: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'User'
+  },
+
+  // CBSE Syllabus Mapping
+  syllabusMapping: {
+    cbseGrade: String,
+    cbseSubject: String,
+    cbseTopics: [String],
+    skillsDeveloped: [String],
+    learningObjectives: [String],
+    competencyLevel: {
+      type: String,
+      enum: ['knowledge', 'understanding', 'application', 'analysis', 'synthesis', 'evaluation']
+    }
   }
 }, {
   timestamps: true

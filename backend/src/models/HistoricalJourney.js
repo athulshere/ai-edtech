@@ -19,7 +19,7 @@ const historicalJourneySchema = new mongoose.Schema({
   },
   subject: {
     type: String,
-    enum: ['History', 'Social Studies', 'Geography'],
+    enum: ['History', 'Social Studies', 'Geography', 'EVS'],
     default: 'History'
   },
 
@@ -36,7 +36,7 @@ const historicalJourneySchema = new mongoose.Schema({
   estimatedDuration: Number, // minutes
   difficulty: {
     type: String,
-    enum: ['beginner', 'intermediate', 'advanced']
+    enum: ['easy', 'beginner', 'intermediate', 'medium', 'advanced', 'hard']
   },
 
   prerequisiteKnowledge: [String],
@@ -62,6 +62,21 @@ const historicalJourneySchema = new mongoose.Schema({
     averageCompletionTime: { type: Number, default: 0 },
     averageEngagementScore: { type: Number, default: 0 },
     completionRate: { type: Number, default: 0 }
+  },
+
+  // CBSE Syllabus Mapping
+  syllabusMapping: {
+    cbseGrade: String,
+    cbseUnit: String,
+    cbseChapters: [String],
+    historicalPeriod: String,
+    geographicalContext: String,
+    keyFigures: [String],
+    learningObjectives: [String],
+    competencyLevel: {
+      type: String,
+      enum: ['knowledge', 'understanding', 'application', 'analysis', 'synthesis', 'evaluation']
+    }
   }
 }, {
   timestamps: true

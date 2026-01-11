@@ -1,5 +1,6 @@
 const Student = require('../models/Student');
 const Assessment = require('../models/Assessment');
+const QuizAttempt = require('../models/QuizAttempt');
 
 /**
  * @desc    Get all children for logged-in parent
@@ -94,23 +95,57 @@ const getChildAssessments = async (req, res) => {
 
     // Build query
     const query = { studentId: id };
-    if (subject) query.subject = subject;
     if (status) query.status = status;
 
     const skip = (parseInt(page) - 1) * parseInt(limit);
 
+    // Fetch both paper assessments and quiz attempts
     const assessments = await Assessment.find(query)
       .sort({ createdAt: -1 })
       .limit(parseInt(limit))
       .skip(skip)
       .select('-__v');
 
-    const total = await Assessment.countDocuments(query);
+    // Fetch quiz attempts (completed only)
+    const quizQuery = { studentId: id, status: 'completed' };
+    const quizAttempts = await QuizAttempt.find(quizQuery)
+      .populate('quizId', 'title subject difficulty')
+      .sort({ completedAt: -1 })
+      .limit(parseInt(limit))
+      .skip(skip)
+      .select('-answers');
+
+    // Transform quiz attempts to match assessment format
+    const quizAssessments = quizAttempts.map(attempt => ({
+      _id: attempt._id,
+      studentId: attempt.studentId,
+      subject: attempt.quizId?.subject || 'Unknown',
+      type: 'quiz',
+      title: attempt.quizId?.title || 'Quiz',
+      score: attempt.score,
+      totalMarks: attempt.totalPoints,
+      percentage: attempt.percentage,
+      status: 'completed',
+      createdAt: attempt.startedAt,
+      completedAt: attempt.completedAt,
+      timeTaken: attempt.timeTaken,
+      difficulty: attempt.quizId?.difficulty,
+      gamificationRewards: attempt.gamificationRewards
+    }));
+
+    // Combine both types
+    const allAssessments = [...assessments, ...quizAssessments]
+      .sort((a, b) => new Date(b.completedAt || b.createdAt) - new Date(a.completedAt || a.createdAt))
+      .slice(0, parseInt(limit));
+
+    const totalAssessments = await Assessment.countDocuments(query);
+    const totalQuizAttempts = await QuizAttempt.countDocuments(quizQuery);
+    const total = totalAssessments + totalQuizAttempts;
 
     res.status(200).json({
       success: true,
       data: {
-        assessments,
+        assessments: allAssessments,
         pagination: {
           currentPage: parseInt(page),
           totalPages: Math.ceil(total / parseInt(limit)),

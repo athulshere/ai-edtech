@@ -17,7 +17,7 @@ const quizSchema = new mongoose.Schema({
   subject: {
     type: String,
     required: [true, 'Subject is required'],
-    enum: ['Mathematics', 'Science', 'English', 'Social Studies', 'General Knowledge']
+    enum: ['Mathematics', 'Science', 'English', 'Social Studies', 'General Knowledge', 'EVS', 'Hindi', 'Physics', 'Chemistry', 'Biology', 'Geography', 'History', 'Political Science', 'Economics']
   },
   difficulty: {
     type: String,
@@ -61,6 +61,19 @@ const quizSchema = new mongoose.Schema({
   createdBy: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'User'
+  },
+  // CBSE Syllabus Mapping
+  syllabusMapping: {
+    cbseGrade: String,
+    cbseSubject: String,
+    cbseUnit: String,
+    cbseChapter: String,
+    cbseTopic: String,
+    learningOutcomes: [String],
+    competencyLevel: {
+      type: String,
+      enum: ['knowledge', 'understanding', 'application', 'analysis', 'synthesis', 'evaluation']
+    }
   }
 }, {
   timestamps: true
